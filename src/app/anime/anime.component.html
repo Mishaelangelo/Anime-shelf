@@ -1,8 +1,8 @@
-<div *ngIf ="(anime$ | async) as anime" >
-  <h2>{{anime[0].title}}</h2>
-  <p>1 сезон</p>
-  <p>2017</p>
-  <a href="http://animevost.org/tip/tv/1889-quan-zhi-gao-shou.html">
-    <img src="https://ранобэ.рф/statics/images/book/32/avatar-korolya-1510130842.png" alt="аватар короля">
+<div>
+  <h2>{{anime.title}}</h2>
+  <p>{{anime.season}}</p>
+  <p>{{anime.year}}</p>
+  <a href="{{anime.link}}">
+    <img src="{{anime.cover}}">
   </a>
 </div>
