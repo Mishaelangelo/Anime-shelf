@@ -8,7 +8,7 @@ export class AnimeService {
 
   constructor(private http: HttpClient) {}
 
-  getAnime(): Observable<Anime[]> {
+  getAnime(): Observable<any> {
    return this.http.get('http://localhost:3000/anime');
   }
 

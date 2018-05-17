@@ -1,5 +1,5 @@
-<div>
-  <h2>{{(anime$ | async)[0].title}}</h2>
+<div *ngIf ="(anime$ | async) as anime" >
+  <h2>{{anime[0].title}}</h2>
   <p>1 сезон</p>
   <p>2017</p>
   <a href="http://animevost.org/tip/tv/1889-quan-zhi-gao-shou.html">
