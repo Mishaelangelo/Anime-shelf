@@ -8,3 +8,4 @@ export class Anime {
    public link: string
   ) {}
 }
+

@@ -1,5 +1,4 @@
 import {Component, Input, OnInit} from '@angular/core';
-import {AnimeService} from '../services/anime.service';
 import {Anime} from '../shared/models/anime.model';
 
 @Component({
@@ -8,13 +7,9 @@ import {Anime} from '../shared/models/anime.model';
   styleUrls: ['./anime.component.css']
 })
 export class AnimeComponent implements OnInit {
-  //anime$: Observable<Anime[]>;
   @Input() anime: Anime;
 
-  constructor(private animeService: AnimeService) { }
+  constructor() { }
 
-  ngOnInit() {
-    //this.anime$ = this.animeService.getAnime();
-  }
-
+  ngOnInit() {}
 }

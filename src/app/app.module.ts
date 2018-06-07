@@ -14,6 +14,7 @@ import { AnimeListComponent } from './anime-list/anime-list.component';
 import { AnimeComponent } from './anime/anime.component';
 import {AnimeService} from './services/anime.service';
 
+
 @NgModule({
   declarations: [
     AppComponent,

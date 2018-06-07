@@ -1,22 +1,28 @@
 {
   "anime": [
-        {
-          "id": 1,
-          "title": "Аватар короля",
-          "season": "1 сезон",
-          "year": 2017,
-          "cover": "https://ранобэ.рф/the-king's-avatar/",
-          "link": "http://animevost.org/tip/tv/1889-quan-zhi-gao-shou.html"
-        },
-        {
-          "id": 2,
-          "title": "Тетрадь смерти",
-          "season": "1 сезон",
-          "year": 2006,
-          "cover": "http://img2.ntv.ru/home/news/20130424/dn_vs.jpg",
-          "link": "http://gidonline.in/film/tetrad-smerti-anime/"
-        }
-    ]
-
-
+    {
+      "id": 1,
+      "title": "Аватар короля",
+      "season": "1 сезон",
+      "year": 2017,
+      "cover": "https://ранобэ.рф/statics/images/book/32/avatar-korolya-1510130842.png",
+      "link": "http://animevost.org/tip/tv/1889-quan-zhi-gao-shou.html"
+    },
+    {
+      "id": 2,
+      "title": "Тетрадь смерти",
+      "season": "1 сезон",
+      "year": 2006,
+      "cover": "http://img2.ntv.ru/home/news/20130424/dn_vs.jpg",
+      "link": "http://gidonline.in/film/tetrad-smerti-anime/"
+    },
+    {
+      "title": "5tr",
+      "season": "2 seson",
+      "year": "1111",
+      "cover": "iuyg",
+      "link": "sdf",
+      "id": 3
+    }
+  ]
 }

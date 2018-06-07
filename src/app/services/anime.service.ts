@@ -12,5 +12,7 @@ export class AnimeService {
    return this.http.get('http://localhost:3000/anime');
   }
 
-
+  getId(): Observable<any> {
+    return this.http.get('http://localhost:3000/anime');
+  }
 }

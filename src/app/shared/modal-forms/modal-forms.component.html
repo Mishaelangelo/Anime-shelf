@@ -1,43 +1,43 @@
 <div class="modal-body">
-  <form>
+  <form #myForm="ngForm" novalidate (ngSubmit)="onSubmit(myForm)">
     <div class="form-group row">
-      <label for="anime-title" class="col-sm-2 col-form-label"> {{ title }} </label>
+      <label for="title" class="col-sm-2 col-form-label"> {{ title }} </label>
       <div class="col-sm-10">
-        <input type = "text" class = "form-control" name = "anime-title" id = "anime-title" value = "Аватар короля">
+        <input type = "text" class = "form-control" name = "title" id = "title"  value = "Аватар короля" ngModel>
       </div>
     </div>
 
     <div class="form-group row">
-      <label for="anime-season" class="col-sm-2 col-form-label"> {{ season }} </label>
+      <label for="season" class="col-sm-2 col-form-label"> {{ season }} </label>
       <div class="col-sm-10">
-        <input type = "text" class = "form-control" name = "anime-season" id = "anime-season" value = "1 сезон">
+        <input type = "text" class = "form-control" name = "season" id = "season" value = "1 сезон" ngModel>
       </div>
     </div>
 
     <div class="form-group row">
-      <label for="anime-year" class="col-sm-2 col-form-label"> {{year}} </label>
+      <label for="year" class="col-sm-2 col-form-label"> {{year}} </label>
       <div class="col-sm-10">
-        <input type = "text" class = "form-control" name = "anime-year" id = "anime-year" value = "2017">
+        <input type = "text" class = "form-control" name = "year" id = "year" value = "2017" ngModel>
       </div>
     </div>
 
     <div class="form-group row">
-      <label for="anime-cover" class="col-sm-2 col-form-label"> {{cover}} </label>
+      <label for="cover" class="col-sm-2 col-form-label"> {{cover}} </label>
       <div class="col-sm-10">
-        <input type = "text" class = "form-control" name = "anime-cover" id = "anime-cover" value = "https://ранобэ.рф/the-king's-avatar/">
+        <input type = "text" class = "form-control" name = "cover" id = "cover" value = "https://ранобэ.рф/the-king's-avatar/" ngModel>
       </div>
     </div>
 
     <div class="form-group row">
-      <label for="anime-link" class="col-sm-2 col-form-label"> {{link}} </label>
+      <label for="link" class="col-sm-2 col-form-label"> {{link}} </label>
       <div class="col-sm-10">
-        <input type = "text" class = "form-control" name = "anime-link" id = "anime-link" value = "http://animevost.org/tip/tv/1889-quan-zhi-gao-shou.html">
+        <input type = "text" class = "form-control" name = "link" id = "link" value = "http://animevost.org/tip/tv/1889-quan-zhi-gao-shou.html" ngModel>
       </div>
     </div>
 
     <div class="modal-footer">
       <button type="button" class="btn btn-secondary" data-dismiss="modal">Close</button>
-      <button type="button" class="btn btn-primary" id="modal-add-anime-ok">Add anime</button>
+      <button type="submit"  class="btn btn-primary" id="modal-add-anime-ok">Add anime</button>
     </div>
 
   </form>
