@@ -1,9 +1,9 @@
-import { Component } from '@angular/core';
+import {Component, Input} from '@angular/core';
 import { NgForm} from '@angular/forms';
-import {Anime} from '../models/anime.model';
 import {HttpClient} from '@angular/common/http';
 import {AnimeService} from '../../services/anime.service';
-import switchMap from 'rxjs/operator/switchMap';
+import 'rxjs/add/operator/switchMap';
+import 'rxjs/add/operator/share';
 
 
 @Component({
@@ -12,25 +12,30 @@ import switchMap from 'rxjs/operator/switchMap';
   styleUrls: ['./modal-forms.component.css']
 })
 export class ModalFormsComponent {
-  title: string = `Title:`;
-  season: string = `Season:`;
-  year: string = `Year:`;
-  cover: string = `Cover:`;
-  link: string = `Link:`;
+  @Input() modalRef: any;
+  title = `Title:`;
+  season = `Season:`;
+  year = `Year:`;
+  cover = `Cover:`;
+  link = `Link:`;
 
- // anime: Anime = new Anime();
-  //receivedUser: Anime;
-  //done: boolean = false;
 
    constructor(private http: HttpClient, private animeService: AnimeService){
   }
 
-  onSubmit(form: NgForm){
-     this.animeService.getId().switchMap((data) => {
-       form.value.id = data.id++;
-       return this.http.post('http://localhost:3000/anime', form.value).subscribe(() => {console.log("hi");},
-         error => console.log(error));
-     });
+  onSubmit(form: NgForm): void {
+      this.animeService.getId()
+        .switchMap((id) => {
+       form.value.id = ++id;
+       return this.animeService.saveAnime( form.value);
+     })
+      .subscribe(
+        () => {
+          this.modalRef.hide();
+          this.animeService.animeSink.next(null);
+        },
+        (error) => console.log(error)
+      );
 
   }
 

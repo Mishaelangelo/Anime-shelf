@@ -9,10 +9,12 @@ import {AnimeService} from '../services/anime.service';
   styleUrls: ['./anime-list.component.css']
 })
 export class AnimeListComponent implements OnInit {
-  animes$: Observable<Anime[]> = this.animeService.getAnime();
+  animes$: Observable<Anime[]>;
   constructor(private animeService: AnimeService) { }
 
   ngOnInit() {
+    this.animeService.animeSink.next(null);
+    this.animes$ = this.animeService.getAnime();
   }
 
 }
