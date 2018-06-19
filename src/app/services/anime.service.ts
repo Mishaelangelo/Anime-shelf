@@ -1,9 +1,8 @@
 import { Injectable } from '@angular/core';
-import {HttpClient} from '@angular/common/http';
+import {HttpClient ,HttpParams} from '@angular/common/http';
 import {Observable} from 'rxjs/Observable';
 import {Anime} from '../shared/models/anime.model';
 import 'rxjs/add/operator/map';
-import {Subject} from 'rxjs/Subject';
 import {BehaviorSubject} from 'rxjs/BehaviorSubject';
 
 @Injectable()
@@ -15,12 +14,22 @@ export class AnimeService {
     return this.animeSink.asObservable().switchMap(() => this.http.get('http://localhost:3000/anime'));
   }
 
-  getId(): Observable<any> {
+  getLastId(): Observable<any> {
     return this.http.get('http://localhost:3000/anime').map((data: Anime[]) => data.length);
   }
 
   saveAnime(anime: Anime): Observable<any> {
     return this.http.post('http://localhost:3000/anime', anime);
+  }
+
+  /* editAnime(id: number, anime: Anime) {
+     const urlParams = new HttpParams().set("id", id.toString());
+     return this.http.put('http://localhost:3000/anime', anime, { params: urlParams});
+  }*/
+
+  deletAnime(id: number){
+    const urlParams = new HttpParams().set("id", id.toString());
+    return this.http.delete('http://localhost:3000/anime', { params: urlParams});
   }
 }
 

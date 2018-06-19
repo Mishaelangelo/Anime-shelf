@@ -24,7 +24,7 @@ export class ModalFormsComponent {
   }
 
   onSubmit(form: NgForm): void {
-      this.animeService.getId()
+      this.animeService.getLastId()
         .switchMap((id) => {
        form.value.id = ++id;
        return this.animeService.saveAnime( form.value);
