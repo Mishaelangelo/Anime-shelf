@@ -1,0 +1,35 @@
+h2 {
+  text-align: center;
+}
+
+.anime {
+  display: inline-block;
+  border: 1px solid black;
+}
+
+.anime p {
+  text-align: center;
+}
+
+.anime img
+{
+  width: 200px;
+  height: 300px;
+  padding-left: 7%;
+}
+
+.buttons
+{
+  padding-top: 2%;
+  margin-left: 10%;
+}
+
+.buttons .first{
+  width: 66px;
+}
+
+.buttons .second
+{
+  float: right;
+  margin-right: 13%;
+}

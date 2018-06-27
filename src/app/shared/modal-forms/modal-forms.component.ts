@@ -1,5 +1,5 @@
 import {Component, Input} from '@angular/core';
-import { NgForm} from '@angular/forms';
+import { NgForm } from '@angular/forms';
 import {HttpClient} from '@angular/common/http';
 import {AnimeService} from '../../services/anime.service';
 import 'rxjs/add/operator/switchMap';

@@ -1,10 +1,13 @@
-<div>
-  <h2>{{anime.title}}</h2>
-  <p>{{anime.season}}</p>
-  <p>{{anime.year}}</p>
-  <a href="{{anime.link}}">
-    <img src="{{anime.cover}}">
-  </a>
-  <button type="button" class="btn btn-warning" (click)="editAnime()">Edit</button>
-  <button type="button" class="btn btn-danger" (click)="deleteAnime()">Delete</button>
-</div>
+  <div class="d-flex justify-content-around anime">
+    <h2>{{anime.title}}</h2>
+    <p>{{anime.season}}</p>
+    <p>{{anime.year}}</p>
+    <a href="{{anime.link}}">
+      <img src="{{anime.cover}}">
+    </a>
+    <div class="buttons">
+      <button type="button" class="first btn btn-warning" (click)="editAnime()">Edit</button>
+      <button type="button" class="second btn btn-danger" (click)="deleteAnime()">Delete</button>
+    </div>
+  </div>
+

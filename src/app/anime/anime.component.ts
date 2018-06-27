@@ -15,11 +15,11 @@ export class AnimeComponent implements OnInit {
 
   ngOnInit() {}
 
-  editAnime(): void {
+  /*editAnime(): void {
     const { id } = this.anime;
-    this.animeService.editAnime(id, )
+    this.animeService.editAnime(id,)
       .subscribe(() => this.animeService.animeSink.next(null));
-  }
+  }*/
 
   deleteAnime(): void {
     const { id } = this.anime;
