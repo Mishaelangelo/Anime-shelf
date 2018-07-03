@@ -1,3 +1,3 @@
-<div *ngIf="(animes$ | async) as animes">
+<div *ngIf="(animes$ | async) as animes" class="flex-content">
   <app-anime *ngFor="let singleAnime of animes" [anime]="singleAnime"></app-anime>
 </div>
