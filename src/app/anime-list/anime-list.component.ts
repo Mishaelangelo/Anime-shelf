@@ -14,7 +14,7 @@ export class AnimeListComponent implements OnInit {
 
   ngOnInit() {
     this.animeService.animeSink.next(null);
-    this.animes$ = this.animeService.getAnime();
+    this.animes$ = this.animeService.getAnimes();
   }
 
 }

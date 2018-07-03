@@ -13,6 +13,7 @@ import {HttpClientModule} from '@angular/common/http';
 import { AnimeListComponent } from './anime-list/anime-list.component';
 import { AnimeComponent } from './anime/anime.component';
 import {AnimeService} from './services/anime.service';
+import {ReactiveFormsModule} from '@angular/forms';
 
 
 @NgModule({
@@ -26,7 +27,7 @@ import {AnimeService} from './services/anime.service';
   ],
   imports: [
     BrowserModule,
-    FormsModule,
+    ReactiveFormsModule,
     CommonModule,
     ModalModule.forRoot(),
     HttpClientModule

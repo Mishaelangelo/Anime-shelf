@@ -1,4 +1,17 @@
-<button type="button" class="btn btn-primary" (click)="openModal(template)">Add Anime</button>
+<button
+  *ngIf="mode === 'create'"
+  type="button"
+  class="btn btn-primary"
+  (click)="openModal(template)">
+  Add Anime
+</button>
+<button
+  *ngIf="mode === 'edit'"
+  type="button"
+  class="btn btn-warning"
+  (click)="openModal(template)">
+  Edit
+</button>
 
 <ng-template #template>
   <div class="modal-header">
@@ -9,6 +22,6 @@
   </div>
   <div class="modal-body">
     <!--my modal form -->
-    <app-modal-forms [modalRef]="modalRef"></app-modal-forms>
+    <app-modal-forms [modalRef]="modalRef" [anime]="anime"></app-modal-forms>
   </div>
 </ng-template>

@@ -10,8 +10,12 @@ export class AnimeService {
   animeSink = new BehaviorSubject<Anime[]>([]);
   constructor(private http: HttpClient) {}
 
-  getAnime(): Observable<any> {
+  getAnimes(): Observable<any> {
     return this.animeSink.asObservable().switchMap(() => this.http.get('http://localhost:3000/anime'));
+  }
+
+  getAnime(id: number): Observable<any> {
+    return this.http.get(`http://localhost:3000/anime/${id}`);
   }
 
   getLastId(): Observable<any> {
@@ -22,9 +26,8 @@ export class AnimeService {
     return this.http.post('http://localhost:3000/anime', anime);
   }
 
-  editAnime(id: number, anime: Anime): Observable<any> {
-    const urlParams = new HttpParams().set("id", id.toString());
-     return this.http.put(`http://localhost:3000/anime/${id}`, anime, { params: urlParams});
+  editAnime(anime: Anime): Observable<any> {
+     return this.http.put(`http://localhost:3000/anime/${anime.id}`, anime);
   }
 
   deleteAnime(id: number): Observable<any> {

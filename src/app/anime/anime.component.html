@@ -6,7 +6,7 @@
       <img src="{{anime.cover}}">
     </a>
     <div class="buttons">
-      <button type="button" class="first btn btn-warning" (click)="editAnime()">Edit</button>
+      <app-modal mode="edit" [id]="anime.id"></app-modal>
       <button type="button" class="second btn btn-danger" (click)="deleteAnime()">Delete</button>
     </div>
   </div>

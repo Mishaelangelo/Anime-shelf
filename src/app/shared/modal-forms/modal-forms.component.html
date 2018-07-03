@@ -1,43 +1,43 @@
 <div class="modal-body">
-  <form #myForm="ngForm" novalidate (ngSubmit)="onSubmit(myForm)">
+  <form [formGroup]="myForm" novalidate (ngSubmit)="onSubmit()">
     <div class="form-group row">
       <label for="title" class="col-sm-2 col-form-label"> {{ title }} </label>
       <div class="col-sm-10">
-        <input type = "text" class = "form-control" name = "title" id = "title"  value = "Аватар короля" ngModel>
+        <input type = "text" class = "form-control" id = "title"  formControlName="title">
       </div>
     </div>
 
     <div class="form-group row">
       <label for="season" class="col-sm-2 col-form-label"> {{ season }} </label>
       <div class="col-sm-10">
-        <input type = "text" class = "form-control" name = "season" id = "season" value = "1 сезон" ngModel>
+        <input type = "text" class = "form-control" id = "season" formControlName="season">
       </div>
     </div>
 
     <div class="form-group row">
       <label for="year" class="col-sm-2 col-form-label"> {{year}} </label>
       <div class="col-sm-10">
-        <input type = "text" class = "form-control" name = "year" id = "year" value = "2017" ngModel>
+        <input type = "text" class = "form-control" id = "year" formControlName="year">
       </div>
     </div>
 
     <div class="form-group row">
       <label for="cover" class="col-sm-2 col-form-label"> {{cover}} </label>
       <div class="col-sm-10">
-        <input type = "text" class = "form-control" name = "cover" id = "cover" value = "https://ранобэ.рф/the-king's-avatar/" ngModel>
+        <input type = "text" class = "form-control" id = "cover" formControlName="cover">
       </div>
     </div>
 
     <div class="form-group row">
       <label for="link" class="col-sm-2 col-form-label"> {{link}} </label>
       <div class="col-sm-10">
-        <input type = "text" class = "form-control" name = "link" id = "link" value = "http://animevost.org/tip/tv/1889-quan-zhi-gao-shou.html" ngModel>
+        <input type = "text" class = "form-control" id = "link" formControlName="link">
       </div>
     </div>
 
     <div class="modal-footer">
       <button type="button" class="btn btn-secondary" data-dismiss="modal">Close</button>
-      <button type="submit"  class="btn btn-primary" id="modal-add-anime-ok">Add anime</button>
+      <button type="submit"  class="btn btn-primary" id="modal-add-anime-ok">Save</button>
     </div>
 
   </form>
