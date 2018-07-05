@@ -7,4 +7,5 @@ import { Component } from '@angular/core';
 })
 export class HomeComponent {
  title: string = `Anime Library`;
+ form_title: string = `Add anime to library`;
 }

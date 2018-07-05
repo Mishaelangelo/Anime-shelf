@@ -1,0 +1,14 @@
+  <div class="anime">
+    <h2>{{anime.title}}</h2>
+    <p>{{anime.season}}</p>
+    <p>{{anime.year}}</p>
+    <a href="{{anime.link}}">
+      <img src="{{anime.cover}}">
+    </a>
+    <div class="buttons">
+      <app-modal mode="edit" [id]="anime.id"></app-modal>
+      <button type="button" class="second btn btn-danger" (click)="deleteAnime()">Delete</button>
+    </div>
+  </div>
+
+
