@@ -1,6 +1,6 @@
+import {Routes, RouterModule} from '@angular/router';
 import { BrowserModule } from '@angular/platform-browser';
 import { NgModule } from '@angular/core';
-
 
 import { AppComponent } from './app.component';
 import { FormsModule } from '@angular/forms';
@@ -14,7 +14,16 @@ import { AnimeListComponent } from './anime-list/anime-list.component';
 import { AnimeComponent } from './anime/anime.component';
 import {AnimeService} from './services/anime.service';
 import {ReactiveFormsModule} from '@angular/forms';
+import { SignComponent } from './sign/sign.component';
+import { LoginComponent } from './login/login.component';
+import {AuthService} from "./auth-service";
 
+
+const appRoutes: Routes =[
+  { path: '', component: HomeComponent},
+  { path: 'sign', component: SignComponent },
+  { path: 'login', component: LoginComponent}
+];
 
 @NgModule({
   declarations: [
@@ -23,16 +32,20 @@ import {ReactiveFormsModule} from '@angular/forms';
     ModalComponent,
     ModalFormsComponent,
     AnimeListComponent,
-    AnimeComponent
+    AnimeComponent,
+    SignComponent,
+    LoginComponent
   ],
   imports: [
     BrowserModule,
     ReactiveFormsModule,
     CommonModule,
     ModalModule.forRoot(),
-    HttpClientModule
+    HttpClientModule,
+    FormsModule,
+    RouterModule.forRoot(appRoutes)
   ],
-  providers: [AnimeService],
+  providers: [AnimeService, AuthService],
   bootstrap: [AppComponent]
 })
 export class AppModule { }

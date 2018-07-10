@@ -1,0 +1,14 @@
+<div id="container">
+  <h1>Log In</h1>
+  <form (ngSubmit) = "onSubmit(loginForm)" #loginForm="ngForm">
+    <input ngModel name = "login" required type ="login" placeholder="Login">
+    <input ngModel name = "password" required type ="password" placeholder="Password">
+    <button type="submit" [disabled] = "!loginForm.valid" href="#">Log in</button>
+    <button  href="#">Sign up</button>
+    <div id="remember-container">
+      <input type="checkbox" id="checkbox-2-1" class="checkbox" checked="checked"/>
+      <span id="remember">Remember me</span>
+      <span id="forgotten">Forgotten password</span>
+    </div>
+  </form>
+</div>

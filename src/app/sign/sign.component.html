@@ -1,0 +1,15 @@
+
+<div id="form-main">
+  <div id="form-div">
+    <form (ngSubmit) = "onSubmit(signupForm)" #signupForm="ngForm">
+        <!--<input ngModel name = "login" required type ="login" placeholder="Login" id="login" class="validate[required,custom[onlyLetter],length[0,100]] feedback-input"/>-->
+        <input ngModel name = "password" required type ="password" placeholder="Password" id="password" class="validate[required,custom[onlyLetter],length[0,100]] feedback-input"/>
+        <input ngModel name = "email" required type ="email"  placeholder="Email" id="email" class="validate[required,custom[email]] feedback-input"/>
+
+      <div class="submit">
+        <input type="submit" value="Sign Up" id="button-blue"/>
+        <div class="ease"></div>
+      </div>
+    </form>
+  </div>
+</div>
