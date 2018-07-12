@@ -18,7 +18,16 @@ import { SignComponent } from './sign/sign.component';
 import { EmailLoginComponent } from './email-login/email-login.component';
 import {AuthService} from "./auth-service";
 import { LoginComponent } from './login/login.component';
+import { AngularFireModule } from 'angularfire2';
 
+export const firebaseConfig = {
+  apiKey: "AIzaSyAT_zgxtxMl1BLSJHvzo6HBOKqcyDVMRNs",
+  authDomain: "anime-shelf.firebaseapp.com",
+  databaseURL: "https://anime-shelf.firebaseio.com",
+  projectId: "anime-shelf",
+  storageBucket: "anime-shelf.appspot.com",
+  messagingSenderId: "425069841082"
+};
 
 const appRoutes: Routes =[
   { path: '', component: HomeComponent},
@@ -46,7 +55,8 @@ const appRoutes: Routes =[
     ModalModule.forRoot(),
     HttpClientModule,
     FormsModule,
-    RouterModule.forRoot(appRoutes)
+    RouterModule.forRoot(appRoutes),
+    AngularFireModule.initializeApp(firebaseConfig)
   ],
   providers: [AnimeService, AuthService],
   bootstrap: [AppComponent]
