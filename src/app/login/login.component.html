@@ -1,14 +1,8 @@
-<div id="container">
-  <h1>Log In</h1>
-  <form (ngSubmit) = "onSubmit(loginForm)" #loginForm="ngForm">
-    <input ngModel name = "email" required type ="email" placeholder="Email">
-    <input ngModel name = "password" required type ="password" placeholder="Password">
-    <button type="submit" [disabled] = "!loginForm.valid" href="#">Log in</button>
-    <button  href="#">Sign up</button>
-    <div id="remember-container">
-      <input type="checkbox" id="checkbox-2-1" class="checkbox" checked="checked"/>
-      <span id="remember">Remember me</span>
-      <span id="forgotten">Forgotten password</span>
-    </div>
-  </form>
+<div class="form-container">
+  <img src="https://png.icons8.com/ios/1600/anime.png" id="lock">
+
+  <button (click)="loginFb()" id="fb">Login With Facebook</button><br>
+  <button (click)="loginGoogle()" id="google">Login With Google</button>
+  <button routerLink="/login-email" id="email">Email</button>
 </div>
+

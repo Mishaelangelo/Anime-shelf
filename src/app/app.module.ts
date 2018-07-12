@@ -15,13 +15,15 @@ import { AnimeComponent } from './anime/anime.component';
 import {AnimeService} from './services/anime.service';
 import {ReactiveFormsModule} from '@angular/forms';
 import { SignComponent } from './sign/sign.component';
-import { LoginComponent } from './login/login.component';
+import { EmailLoginComponent } from './email-login/email-login.component';
 import {AuthService} from "./auth-service";
+import { LoginComponent } from './login/login.component';
 
 
 const appRoutes: Routes =[
   { path: '', component: HomeComponent},
   { path: 'sign', component: SignComponent },
+  { path: 'email-login', component: EmailLoginComponent},
   { path: 'login', component: LoginComponent}
 ];
 
@@ -34,6 +36,7 @@ const appRoutes: Routes =[
     AnimeListComponent,
     AnimeComponent,
     SignComponent,
+    EmailLoginComponent,
     LoginComponent
   ],
   imports: [
