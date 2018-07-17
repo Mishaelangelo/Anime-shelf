@@ -6,6 +6,5 @@ import { Component } from '@angular/core';
   styleUrls: ['./home.component.css']
 })
 export class HomeComponent {
- title: string = `Anime Library`;
- form_title: string = `Add anime to library`;
+  title: string = `Anime Library`;
 }
