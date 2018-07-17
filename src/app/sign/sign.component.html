@@ -1,14 +1,16 @@
-
-<div id="form-main">
-  <div id="form-div">
-    <form (ngSubmit) = "onSubmit(signupForm)" #signupForm="ngForm">
+<div class="main">
+  <div id="form-main">
+    <div id="form-div">
+      <form (ngSubmit) = "onSubmit(signupForm)" #signupForm="ngForm">
+        <img src="http://www.icons101.com/icon_ico/id_80236/Sword_Art_Online_alt.ico" id="lock">
         <input ngModel name = "email" required type ="email"  placeholder="Email" id="email" class="validate[required,custom[email]] feedback-input"/>
         <input ngModel name = "password" required type ="password" placeholder="Password" id="password" class="validate[required,custom[onlyLetter],length[0,100]] feedback-input"/>
 
-      <div class="submit">
-        <input type="submit" value="Sign Up" id="button-blue"/>
-        <div class="ease"></div>
-      </div>
-    </form>
+        <div class="submit">
+          <input type="submit" value="Sign Up" id="button-blue"/>
+          <div class="ease"></div>
+        </div>
+      </form>
+    </div>
   </div>
 </div>

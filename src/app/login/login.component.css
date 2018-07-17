@@ -1,7 +1,7 @@
-html{
+.main {
   background:url(https://media.discordapp.net/attachments/422487695793586176/466686770654871584/Anime_Anime_girl_Quintin__white_background_099985_.png?width=914&height=514) no-repeat;
   background-size: cover;
-  height:100%;
+  height:100vh;
 }
 
 .form-container{
@@ -14,7 +14,7 @@ html{
   float: left;
   left: 50%;
   position: absolute;
-  margin-top: 6%;
+  margin-top: 7%;
   margin-left: -420px;
   -moz-border-radius: 7px;
   -webkit-border-radius: 7px;

@@ -1,9 +1,16 @@
 @import url(https://fonts.googleapis.com/css?family=Montserrat:400,700);
 
-html{
+.main{
   background:url(https://i.pinimg.com/originals/a8/52/57/a8525773c58303884767bba818bab3d4.jpg) no-repeat;
   background-size: cover;
-  height:100%;
+  height:100vh;
+}
+
+#lock {
+  width:180px;
+  height:140px;
+  margin: 5% auto;
+  display:block;
 }
 
 #feedback-page{
@@ -24,9 +31,9 @@ html{
   padding-bottom:50px;
   width: 450px;
   float: left;
-  left: 50%;
+  left: 52%;
   position: absolute;
-  margin-top: 16%;
+  margin-top: 10%;
   margin-left: -260px;
   -moz-border-radius: 7px;
   -webkit-border-radius: 7px;
@@ -41,7 +48,7 @@ html{
   line-height: 22px;
   background-color: #fbfbfb;
   padding: 13px 13px 13px 54px;
-  margin-bottom: 10px;
+  margin-bottom: 15px;
   width:100%;
   -webkit-box-sizing: border-box;
   -moz-box-sizing: border-box;
@@ -52,7 +59,7 @@ html{
 
 .feedback-input:focus{
   background: #fff;
-  box-shadow: 0;
+
   border: 3px solid #3498db;
   color: #3498db;
   outline: none;
@@ -155,7 +162,7 @@ button{
 
 .ease {
   width: 0px;
-  height: 74px;
+  height: 78px;
   background-color: #fbfbfb;
   -webkit-transition: .3s ease;
   -moz-transition: .3s ease;

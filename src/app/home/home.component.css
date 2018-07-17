@@ -2,6 +2,14 @@ h1 {
   text-align: center;
 }
 
+.main {
+  background:url(http://sf.co.ua/14/05/wallpaper-2119169.jpg) no-repeat;
+  background-size: cover;
+  min-height: 100vh;
+  width:100%;
+  height:100%;
+}
+
 container{
   background-color: #fffe73;
 }

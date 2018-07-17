@@ -1,9 +1,11 @@
-<div id="container">
-  <h1>Log In</h1>
-  <form (ngSubmit) = "onSubmit(loginForm)" #loginForm="ngForm">
-    <input ngModel name = "email" required type ="email" placeholder="Email">
-    <input ngModel name = "password" required type ="password" placeholder="Password">
-    <button type="submit" [disabled] = "!loginForm.valid" href="#">Log in</button>
-    <a routerLink="/login" class="alc">Don't have an account?</a>
-  </form>
+<div class="main">
+  <div id="container">
+    <h1>Log In</h1>
+    <form (ngSubmit) = "onSubmit(loginForm)" #loginForm="ngForm">
+      <input ngModel name = "email" required type ="email" placeholder="Email">
+      <input ngModel name = "password" required type ="password" placeholder="Password">
+      <button type="submit" [disabled] = "!loginForm.valid" href="#">Log in</button>
+      <a routerLink="/sign" class="alc">Don't have an account?</a>
+    </form>
+  </div>
 </div>
