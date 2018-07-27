@@ -14,7 +14,7 @@ export class EmailLoginComponent implements OnInit {
   ngOnInit() {
   }
 
-  onSubmit(form: NgForm){
+  onSubmit(form: NgForm) {
     const email = form.value.email;
     const password = form.value.password;
 
