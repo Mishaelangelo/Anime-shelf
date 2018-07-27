@@ -16,9 +16,17 @@ import {AnimeService} from './services/anime.service';
 import {ReactiveFormsModule} from '@angular/forms';
 import { SignComponent } from './sign/sign.component';
 import { EmailLoginComponent } from './email-login/email-login.component';
-import {AuthService} from "./auth-service";
+import {AuthService} from './auth-service';
 import { LoginComponent } from './login/login.component';
 import { AngularFireModule } from 'angularfire2';
+
+import { AngularFireDatabaseModule } from 'angularfire2/database';
+import { AngularFireAuthModule } from 'angularfire2/auth';
+import { NavComponent } from './nav/nav.component';
+import { BsDropdownModule } from 'ngx-bootstrap';
+import { UserComponent } from './user/user.component'
+
+
 
 export const firebaseConfig = {
   apiKey: "AIzaSyAT_zgxtxMl1BLSJHvzo6HBOKqcyDVMRNs",
@@ -30,7 +38,8 @@ export const firebaseConfig = {
 };
 
 const appRoutes: Routes =[
-  { path: '', component: HomeComponent},
+  { path: '', component: LoginComponent},
+  { path: 'shelf', component: HomeComponent},
   { path: 'sign', component: SignComponent },
   { path: 'email-login', component: EmailLoginComponent},
   { path: 'login', component: LoginComponent}
@@ -46,17 +55,22 @@ const appRoutes: Routes =[
     AnimeComponent,
     SignComponent,
     EmailLoginComponent,
-    LoginComponent
+    LoginComponent,
+    NavComponent,
+    UserComponent,
   ],
   imports: [
     BrowserModule,
     ReactiveFormsModule,
     CommonModule,
+    BsDropdownModule.forRoot(),
     ModalModule.forRoot(),
     HttpClientModule,
     FormsModule,
     RouterModule.forRoot(appRoutes),
-    AngularFireModule.initializeApp(firebaseConfig)
+    AngularFireModule.initializeApp(firebaseConfig),
+    AngularFireDatabaseModule,
+    AngularFireAuthModule
   ],
   providers: [AnimeService, AuthService],
   bootstrap: [AppComponent]
