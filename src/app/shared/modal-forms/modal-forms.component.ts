@@ -17,7 +17,7 @@ export class ModalFormsComponent implements OnInit {
   @Input() anime: Anime = null;
   title = `Title:`;
   season = `Season:`;
-  year = `Year:`;
+  last_series = `Last viewed:`;
   cover = `Cover:`;
   link = `Link:`;
   public myForm: FormGroup;
