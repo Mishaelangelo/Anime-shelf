@@ -6,7 +6,8 @@ import {Anime} from '../models/anime.model';
 
 @Component({
   selector: 'app-modal',
-  templateUrl: './modal.component.html'
+  templateUrl: './modal.component.html',
+  styleUrls: ['./modal.component.css']
 })
 export class ModalComponent {
   @Input() mode: string;

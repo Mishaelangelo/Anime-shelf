@@ -72,5 +72,4 @@ export class ModalFormsComponent implements OnInit {
         (error) => console.log(error)
       );
   }
-
 }
