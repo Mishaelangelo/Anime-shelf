@@ -3,7 +3,7 @@ export class Anime {
    public id: number = null,
    public title: string = '',
    public season: string = '',
-   public year: number = null,
+   public last_series: number = null,
    public cover: string = '',
    public link: string = ''
   ) {}
