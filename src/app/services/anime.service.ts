@@ -1,29 +1,26 @@
 import { Injectable } from '@angular/core';
-import { HttpClient, HttpParams} from '@angular/common/http';
+import { HttpClient } from '@angular/common/http';
 import { Observable } from 'rxjs/Observable';
 import { Anime } from '../shared/models/anime.model';
 import 'rxjs/add/operator/map';
 import { BehaviorSubject } from 'rxjs/BehaviorSubject';
-import "rxjs/add/operator/do";
+import 'rxjs/add/operator/do';
 
 @Injectable()
 export class AnimeService {
   animeSink = new BehaviorSubject<Anime[]>([]);
-  private _animesCount: number = 0;
 
-  set animesCount(count: number){
-    this._animesCount = count;
-  }
+  private animesCountSink: BehaviorSubject<number> = new BehaviorSubject<number>(0);
 
-  get animesCount(){
-    return this._animesCount;
+  get animesCount$() {
+    return this.animesCountSink.asObservable();
   }
 
   constructor(private http: HttpClient) {}
 
   getAnimes(): Observable<any> {
     return this.animeSink.asObservable().switchMap(() => this.http.get('http://localhost:3000/anime'))
-      .do((animes: Array<any>) => this.animesCount = animes.length);
+      .do((animes: Array<any>) => this.animesCountSink.next(animes.length));
   }
 
   getAnime(id: number): Observable<any> {

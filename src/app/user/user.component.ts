@@ -9,9 +9,10 @@ import {AnimeService} from '../services/anime.service';
   styleUrls: ['./user.component.scss']
 })
 export class UserComponent implements OnInit {
-  animesCount: number = this.animeService.animesCount;
+  animesCount$ = this.animeService.animesCount$;
 
-  constructor(private authService: AuthService, private animeService: AnimeService) { }
+  constructor(private authService: AuthService,
+              private animeService: AnimeService) { }
 
   ngOnInit() {
   }

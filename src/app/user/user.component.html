@@ -5,7 +5,7 @@
   <ul id="dropdown-basic" *dropdownMenu class="dropdown-menu"
       role="menu" aria-labelledby="button-basic">
     <li role="menuitem"><p>User:</p></li>
-    <li role="menuitem"><p>Number of anime: {{animesCount}}</p></li>
+    <li role="menuitem"><p>Number of anime: {{animesCount$ | async}}</p></li>
     <button (click)="Logout()" class="logout" >Logout <img src="https://cdn1.iconfinder.com/data/icons/materia-arrows-symbols-vol-8/24/018_320_door_exit_logout-512.png" alt="logout"></button>
   </ul>
 </div>
