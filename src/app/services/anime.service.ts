@@ -18,9 +18,9 @@ export class AnimeService {
 
   constructor(private http: HttpClient) {}
 
-  getAnimes(): Observable<any> {
-    return this.animeSink.asObservable().switchMap(() => this.http.get('http://localhost:3000/anime'))
-      .do((animes: Array<any>) => this.animesCountSink.next(animes.length));
+  getAnimes(): Observable<Anime[]> {
+    return this.animeSink.asObservable().switchMap(() => this.http.get<Anime[]>('http://localhost:3000/anime'))
+      .do((animes: Anime[]) => this.animesCountSink.next(animes.length));
   }
 
   getAnime(id: number): Observable<any> {
